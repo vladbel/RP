@@ -127,6 +127,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RP.ViewModels.DesignTime\RP.ViewModels.DesignTime.csproj">
+      <Project>{f0055487-0531-43fe-8c2f-f408126e673a}</Project>
+      <Name>RP.ViewModels.DesignTime</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RP.ViewModels\RP.ViewModels.csproj">
       <Project>{c2921997-c52d-4c61-bbab-9b7969a9c6f8}</Project>
       <Name>RP.ViewModels</Name>
