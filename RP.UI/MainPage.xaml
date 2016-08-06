@@ -13,6 +13,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
           d:DataContext="{d:DesignInstance design:MainPageViewModel,
                         IsDesignTimeCreatable=True}">
+
         <TextBlock Text="{Binding Property}" Margin="34,52,52,390"/>
         <Button Command="{Binding Action}" Margin="111,286,0,282" Height="72" Width="135"/>
     </Grid>

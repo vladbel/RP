@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Common\BaseViewModel.cs" />
     <Compile Include="Common\RelayComand.cs" />
+    <Compile Include="Controls\PinViewModel.cs" />
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
