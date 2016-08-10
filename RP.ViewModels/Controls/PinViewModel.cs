@@ -30,16 +30,31 @@ namespace RP.ViewModels.Controls
                 );
         }
 
-        private int _property;
+        private int _pinValue;
         public int PinValue
         {
             get
             {
-                return _property;
+                return _pinValue;
             }
             set
             {
-                _property = value;
+                _pinValue = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private int _pinName;
+        public int PinName
+        {
+            get
+            {
+                return _pinName;
+
+            }
+            set
+            {
+                _pinName = value;
                 OnPropertyChanged();
             }
         }
@@ -68,6 +83,21 @@ namespace RP.ViewModels.Controls
                 PinValue += 1;
                 await Task.FromResult(false);
             }
+        }
+
+        public ICommand SwitchPinMode { get; set; }
+
+        private async Task SwtchPinMode()
+        {
+            if (PinMode == PinMode.Write)
+            {
+                PinMode = PinMode.Read;
+            }
+            else
+            {
+                PinMode = PinMode.Write;
+            }
+            await Task.FromResult(false);
         }
     }
 }

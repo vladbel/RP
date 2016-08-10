@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="RP.UI.Controls.PinWriter"
+    x:Class="RP.UI.Controls.PinReader"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RP.UI.Controls"
@@ -10,9 +10,9 @@
     d:DesignHeight="100"
     d:DesignWidth="400">
 
-    <Grid d:DataContext="{d:DesignInstance design:PinWritableViewModel,
+    <Grid d:DataContext="{d:DesignInstance design:PinReadOnlyViewModel,
                         IsDesignTimeCreatable=True}"
-          Background="LightGreen">
+          Background="LightBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition Width="0.4*"/>
@@ -22,21 +22,10 @@
                    Text="{Binding PinName}" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center"/>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.5*"/>
-                <RowDefinition Height="0.5*"/>
-            </Grid.RowDefinitions>
-            <TextBox Grid.Row="0" Text="{Binding PinValue, Mode=TwoWay}" 
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Center"/>
-            <Button Grid.Row="1"
-                Command="{Binding SetPinValue}"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center">
-                <TextBlock> Set Pin Value</TextBlock>
-            </Button>
-        </Grid>
+         <TextBox Grid.Column="1" Text="{Binding PinValue}" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"/>
+
         <Button Grid.Column="2"
                 Command="{Binding SwitchMode}"
                 VerticalAlignment="Center"

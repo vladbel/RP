@@ -41,7 +41,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\PinViewModel.cs" />
+    <Compile Include="Controls\PinReadOnlyViewModel.cs" />
+    <Compile Include="Controls\PinWritableViewModel.cs" />
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
