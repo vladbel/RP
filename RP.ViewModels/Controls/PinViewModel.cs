@@ -28,6 +28,13 @@ namespace RP.ViewModels.Controls
                     await SetPinValueAsync();
                 }
                 );
+
+            SwitchPinMode = new RelayCommand(
+                async () =>
+                {
+                    await SwitchPinModeAsync();
+                }
+                );
         }
 
         private int _pinValue;
@@ -87,7 +94,7 @@ namespace RP.ViewModels.Controls
 
         public ICommand SwitchPinMode { get; set; }
 
-        private async Task SwtchPinMode()
+        private async Task SwitchPinModeAsync()
         {
             if (PinMode == PinMode.Write)
             {
