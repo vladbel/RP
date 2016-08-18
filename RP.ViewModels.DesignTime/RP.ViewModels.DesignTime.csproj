@@ -41,6 +41,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\GpioPinsDesignViewModel.cs" />
     <Compile Include="Controls\PinReadOnlyViewModel.cs" />
     <Compile Include="Controls\PinWritableViewModel.cs" />
     <Compile Include="MainPageViewModel.cs" />

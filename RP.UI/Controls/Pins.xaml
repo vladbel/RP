@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="RP.UI.Controls.Pins"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RP.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:design="using:RP.ViewModels.DesignTime.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <DataTemplate x:Key="PinReaderDataTemplate">
+            <local:PinReader>
+
+            </local:PinReader>
+        </DataTemplate>
+        <DataTemplate x:Key="PinWriterDataTemplate">
+            <local:PinWriter>
+
+            </local:PinWriter>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid d:DataContext="{d:DesignInstance design:GpioPinsDesignViewModel,
+                        IsDesignTimeCreatable=True}">
+        <ListView ItemsSource="{Binding Pins}"
+                  ItemTemplate="{StaticResource PinWriterDataTemplate}">
+
+        </ListView>
+    </Grid>
+</UserControl>
