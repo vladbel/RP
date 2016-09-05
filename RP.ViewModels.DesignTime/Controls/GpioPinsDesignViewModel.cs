@@ -12,14 +12,23 @@ namespace RP.ViewModels.DesignTime.Controls
             {
                 new PinViewModel()
                 {
-                    PinValue = 55,
+                    PinName = 1,
+                    PinValue = 11,
                     PinMode = PinMode.Read
                 },
                 new PinViewModel()
                 {
-                    PinValue = 66,
+                    PinName = 2,
+                    PinValue = 22,
+                    PinMode = PinMode.Write
+                },
+                new PinViewModel()
+                {
+                    PinName = 3,
+                    PinValue = 33,
                     PinMode = PinMode.Write
                 }
+
             };
         }
     }

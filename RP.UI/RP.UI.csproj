@@ -101,6 +101,7 @@
     <Compile Include="Controls\Pins.xaml.cs">
       <DependentUpon>Pins.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PinTemplateSelector.cs" />
     <Compile Include="Controls\PinWriter.xaml.cs">
       <DependentUpon>PinWriter.xaml</DependentUpon>
     </Compile>

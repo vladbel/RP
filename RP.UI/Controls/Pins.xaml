@@ -20,13 +20,16 @@
 
             </local:PinWriter>
         </DataTemplate>
+        <local:PinTemplateSelector x:Key="PinTemplateSelector"
+                  PinReaderTemplate="{StaticResource PinReaderDataTemplate}"
+                  PinWriterTemplate="{StaticResource PinWriterDataTemplate}"
+        />
     </UserControl.Resources>
 
     <Grid d:DataContext="{d:DesignInstance design:GpioPinsDesignViewModel,
                         IsDesignTimeCreatable=True}">
         <ListView ItemsSource="{Binding Pins}"
-                  ItemTemplate="{StaticResource PinWriterDataTemplate}">
-
+                  ItemTemplateSelector="{StaticResource PinTemplateSelector}">
         </ListView>
     </Grid>
 </UserControl>
